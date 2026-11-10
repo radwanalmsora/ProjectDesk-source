@@ -389,7 +389,7 @@ namespace ProjectDesk
 
         private static string PromptForName(string title, string initialValue)
         {
-            var dialog = new Window
+            var dialog = new EnvDTE.Window
             {
                 Title = title,
                 Width = 380,
