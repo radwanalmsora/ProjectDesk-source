@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsix-manifest/2015" xmlns:d="http://schemas.microsoft.com/developer/vsix-manifest-extension/2010">
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
     <Identity Id="ProjectDesk.12345678-9abc-def0-1234-56789abcdef0" Version="1.0.0" Language="en-US" Publisher="Radwan" />
     <DisplayName>Project Desk</DisplayName>
@@ -20,6 +20,6 @@
     <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
   </Prerequisites>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" Path="ProjectDesk.dll" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" Path="ProjectDesk.dll" xmlns:d="http://schemas.microsoft.com/developer/vsix-manifest-extension/2010" />
   </Assets>
 </PackageManifest>
