@@ -5,7 +5,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <LangVersion>latest</LangVersion>
     <GeneratePkgDefFile>true</GeneratePkgDefFile>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
     <AssemblyName>ProjectDesk</AssemblyName>
     <RootNamespace>ProjectDesk</RootNamespace>
   </PropertyGroup>
