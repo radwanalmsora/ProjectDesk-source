@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="ProjectDesk.12345678-9abc-def0-1234-56789abcdef0" Version="1.0.0" Language="en-US" Publisher="Radwan" />
+    <Identity Id="ProjectDesk.12345678-9abc-def0-1234-56789abcdef0" Version="1.0.0" Language="en-US" Publisher="Radwan Almsora" />
     <DisplayName>Project Desk</DisplayName>
     <Description>A handy workspace tool for Visual Studio.</Description>
   </Metadata>
