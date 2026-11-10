@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Commands package="guidProjectDeskPackage">
+    <Groups>
+      <Group guid="guidProjectDeskCommandSet" id="ProjectDeskMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidProjectDeskCommandSet" id="OpenProjectDeskCommand" priority="0x0100" type="Button">
+        <Parent guid="guidProjectDeskCommandSet" id="ProjectDeskMenuGroup" />
+        <Strings>
+          <ButtonText>Project Desk</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="guidProjectDeskPackage" value="{71BFB3E7-57D5-4A40-A1E8-4AF99A4E738A}" />
+    <GuidSymbol name="guidProjectDeskCommandSet" value="{9F635C60-631C-47D9-9D8F-E441E1308C12}">
+      <IDSymbol name="ProjectDeskMenuGroup" value="0x1020" />
+      <IDSymbol name="OpenProjectDeskCommand" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
