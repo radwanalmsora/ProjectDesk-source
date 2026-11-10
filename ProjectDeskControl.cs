@@ -389,7 +389,7 @@ namespace ProjectDesk
 
         private static string PromptForName(string title, string initialValue)
         {
-            var win = new System.Windows.Window();
+            var win = new System.Windows.Window
             {
                 Title = title,
                 Width = 380,
@@ -398,19 +398,22 @@ namespace ProjectDesk
                 ResizeMode = ResizeMode.NoResize,
                 ShowInTaskbar = false
             };
+
             var panel = new StackPanel { Margin = new Thickness(12) };
             var input = new TextBox { Text = initialValue, Margin = new Thickness(0, 0, 0, 10) };
             panel.Children.Add(input);
+
             var buttons = new StackPanel { Orientation = Orientation.Horizontal, HorizontalAlignment = HorizontalAlignment.Right };
             var ok = new Button { Content = "OK", IsDefault = true, MinWidth = 72, Margin = new Thickness(0, 0, 6, 0) };
             var cancel = new Button { Content = "Cancel", IsCancel = true, MinWidth = 72 };
-            ok.Click += (_, __) => dialog.DialogResult = true;
+
+            ok.Click += (_, __) => win.DialogResult = true;
             buttons.Children.Add(ok);
             buttons.Children.Add(cancel);
             panel.Children.Add(buttons);
-            dialog.Content = panel;
+            win.Content = panel;
 
-            return dialog.ShowDialog() == true ? input.Text.Trim() : null;
+            return win.ShowDialog() == true ? input.Text.Trim() : null;
         }
 
         private string GetSafeChildPath(string name)
