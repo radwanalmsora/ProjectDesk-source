@@ -57,7 +57,8 @@ namespace ProjectDesk
             }
 
             window.Initialize(this);
-            ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).Show());
+            Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(((IVsWindowFrame)window.Frame).Show());
+
         }
     }
 }
