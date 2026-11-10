@@ -1,0 +1,28 @@
+name: Build VSIX Extension
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore NuGet Packages
+      run: nuget restore ProjectDesk.csproj
+
+    - name: Build Solution
+      run: msbuild ProjectDesk.csproj /p:Configuration=Release /p:DeployExtension=false
+
+    - name: Upload VSIX Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ProjectDesk-VSIX
+        path: "**/bin/Release/*.vsix"
